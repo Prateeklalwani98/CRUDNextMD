@@ -10,7 +10,9 @@ export default function Blog() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:3000/api/topics");
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/topics`
+        );
         setBlogs(response.data.topics);
       } catch (err) {
         console.error(err);
@@ -29,7 +31,7 @@ export default function Blog() {
     if (!newValue || newValue === oldValue) return;
     try {
       const response = await axios.patch(
-        `http://localhost:3000/api/topics/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`,
         {
           [field]: newValue,
         }

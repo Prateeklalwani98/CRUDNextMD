@@ -17,7 +17,7 @@ export default function HomePage() {
     const data = { title: title, note: note };
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/topics",
+        `${process.env.NEXT_PUBLIC_API_URL}/topics`,
         data
       );
       const respData = response.data;
