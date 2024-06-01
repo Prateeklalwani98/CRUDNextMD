@@ -8,7 +8,7 @@ export default function DelBtn({ id }) {
     const confirmDelete = confirm("You wish to delete this bill permanently?");
 
     if (!confirmDelete) {
-      return; // User canceled the deletion
+      return;
     }
 
     try {

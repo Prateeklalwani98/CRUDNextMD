@@ -4,13 +4,13 @@ import { NextResponse } from "next/server";
 
 export async function PATCH(request, { params }) {
   const { id } = params;
-  const { title, note } = await request.json(); // Extract both title and note from the request body
+  const { title, note } = await request.json();
   await connectMongoDB();
 
   try {
     const updatedTopic = await Topic.findByIdAndUpdate(
       id,
-      { title, note }, // Update both title and note
+      { title, note },
       { new: true }
     );
 
@@ -18,7 +18,6 @@ export async function PATCH(request, { params }) {
       return NextResponse.json({ error: "Topic not found" }, { status: 404 });
     }
 
-    // Return the full updated topic object in the response
     return NextResponse.json(
       { message: "Topic updated", topic: updatedTopic },
       { status: 200 }
