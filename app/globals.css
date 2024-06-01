@@ -1,33 +1,181 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* .addNewContainer {
+  margin: 0 auto; 
+  padding: 20px;
+  width: 90%; 
+  max-width: 800px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.homeHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
+.addNewForm{
+  text-align: center; 
+}
+
+.inputField {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: start;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card {
+  margin: auto;
+  flex: 1 1 1; 
+  width: 28vw;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.card-note {
+  font-size: 1em;
+  color: #555;
+}
+
+.delBtn {
+  color: rgba(255, 0, 0, 0.561);
+  font-size: 1.5rem;
+}
+
+.delBtn:hover {
+  color: red;
+  cursor: pointer;
+} */
+
+/* Global Styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styles */
+.addNewContainer {
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.homeHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.addNewForm {
+  text-align: center;
+}
+
+.inputField {
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+/* Blog Styles */
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.card {
+  flex: 1 1 calc(27%); /* Each card takes up 1/3 of the container width minus the gap */
+  max-width: calc(27% ); /* Ensure the max width also reflects this */
+  margin: 15px; /* Add margin to create space between rows */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.card-note {
+  font-size: 1em;
+  color: #555;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.delBtn {
+  color: rgba(255, 0, 0, 0.561);
+  font-size: 1.5rem;
+}
+
+.delBtn:hover {
+  color: red;
+  cursor: pointer;
 }
